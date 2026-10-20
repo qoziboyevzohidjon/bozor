@@ -23,6 +23,7 @@ export const hashPassword = async (password, salt = 'gamezone-demo') => {
 export const createUserPayload = (formData) => ({
   firstName: formData.firstName.trim(),
   lastName: formData.lastName.trim(),
+  
   username: formData.username.trim(),
   email: formData.email.trim().toLowerCase(),
   role: formData.role,
