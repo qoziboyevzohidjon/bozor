@@ -1,0 +1,115 @@
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px;
+}
+
+.auth-card {
+  width: min(960px, 100%);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  box-shadow: var(--shadow-soft);
+}
+
+.auth-visual {
+  position: relative;
+  background: linear-gradient(160deg, rgba(124,92,255,0.26), rgba(39,182,255,0.14));
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-visual::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.auth-visual-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-visual h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin: 18px 0;
+  letter-spacing: -0.07em;
+}
+
+.auth-content {
+  padding: 36px 28px 28px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  background: rgba(15,23,42,0.9);
+  padding: 8px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--text-secondary);
+  background: transparent;
+  font-weight: 700;
+}
+
+.auth-tab.active {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+.password-toggle {
+  position: relative;
+}
+
+.password-toggle .input {
+  padding-right: 40px;
+}
+
+.password-toggle button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-row input {
+  margin-top: 4px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.inline-note {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 12px;
+}

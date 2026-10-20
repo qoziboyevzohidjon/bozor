@@ -1,0 +1,102 @@
+body {
+  background:
+    radial-gradient(circle at top, rgba(124, 92, 255, 0.18), transparent 30%),
+    linear-gradient(180deg, #070b16 0%, #0a1324 100%);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.page-shell {
+  padding-top: 32px;
+  padding-bottom: 80px;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  padding: 6px 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(124, 92, 255, 0.18);
+  color: var(--primary);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+}
+
+.badge.success { background: rgba(52, 211, 153, 0.12); color: var(--success); border-color: rgba(52, 211, 153, 0.32); }
+.badge.warning { background: rgba(251, 191, 36, 0.12); color: var(--warning); border-color: rgba(251, 191, 36, 0.3); }
+.badge.danger { background: rgba(248, 113, 113, 0.12); color: var(--danger); border-color: rgba(248, 113, 113, 0.2); }
+
+.gradient-text {
+  background: linear-gradient(135deg, #9a8cff 0%, #4cc9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 24px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.empty-state h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hidden { display: none !important; }

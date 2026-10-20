@@ -1,0 +1,29 @@
+@media (max-width: 1100px) {
+  .games-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer-inner { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dashboard-layout { grid-template-columns: 1fr; }
+  .side-panel { position: static; }
+}
+
+@media (max-width: 900px) {
+  .hero, .auth-card { grid-template-columns: 1fr; }
+  .filters-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .games-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topbar { flex-wrap: wrap; padding: 14px 0; }
+  .main-nav { order: 3; width: 100%; justify-content: center; }
+  .header-actions { width: 100%; justify-content: space-between; }
+  .search-box { min-width: 0; flex: 1; }
+}
+
+@media (max-width: 680px) {
+  .games-grid, .footer-inner, .stats-grid, .filters-panel, .form-grid { grid-template-columns: 1fr; }
+  .list-card { grid-template-columns: 1fr; }
+  .game-actions { flex-wrap: wrap; }
+  .section { padding: 54px 0; }
+  .main-nav { gap: 12px; flex-wrap: wrap; }
+  .header-actions { flex-wrap: wrap; }
+  .brand { font-size: 1.2rem; }
+  .hero-copy h1 { font-size: 2.6rem; }
+  .page-shell { padding-top: 16px; }
+}

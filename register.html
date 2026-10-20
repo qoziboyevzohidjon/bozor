@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | GameZone</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="register">
+    <main class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-visual">
+          <div class="auth-visual-inner">
+            <a class="brand" href="index.html"><span class="brand-mark">🎮</span><span>GameZone</span></a>
+            <h1>Join the next generation of gaming commerce.</h1>
+            <p class="inline-note">Create a buyer or seller account to access storefronts, wishlists, orders, and game management.</p>
+          </div>
+        </div>
+        <div class="auth-content">
+          <div class="auth-tabs">
+            <button class="auth-tab active" type="button">Register</button>
+            <a class="auth-tab" href="login.html">Login</a>
+          </div>
+          <form id="registerForm" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="firstName">First name</label>
+                <input class="input" id="firstName" name="firstName" type="text" required />
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last name</label>
+                <input class="input" id="lastName" name="lastName" type="text" required />
+              </div>
+              <div class="form-field">
+                <label for="username">Username</label>
+                <input class="input" id="username" name="username" type="text" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input class="input" id="email" name="email" type="email" required />
+              </div>
+              <div class="form-field password-toggle">
+                <label for="password">Password</label>
+                <input class="input" id="password" name="password" type="password" required />
+                <button type="button" data-toggle-password>Show</button>
+              </div>
+              <div class="form-field password-toggle">
+                <label for="confirmPassword">Confirm password</label>
+                <input class="input" id="confirmPassword" name="confirmPassword" type="password" required />
+                <button type="button" data-toggle-password>Show</button>
+              </div>
+            </div>
+            <div class="form-field" style="margin-top: 18px;">
+              <label for="role">Account type</label>
+              <select class="select" id="role" name="role">
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+              </select>
+            </div>
+            <div class="checkbox-row">
+              <input id="acceptTerms" name="acceptTerms" type="checkbox" />
+              <label for="acceptTerms">I accept the terms and conditions and understand this is a demo front-end prototype.</label>
+            </div>
+            <div class="field-error" data-register-error></div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 18px; width: 100%;">Create account</button>
+          </form>
+          <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
